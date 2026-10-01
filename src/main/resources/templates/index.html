@@ -61,18 +61,22 @@
 
     <form action="/calculate" method="post">
 
-        <label>Student Name:</label>
-        <input type="text" name="studentName" required>
+    <div th:if="${error}" style="color: red; margin-bottom: 10px;">
+        <p th:text="${error}"></p>
+    </div>
 
-        <label>Total Classes:</label>
-        <input type="number" name="totalClasses" min="1" required>
+    <label>Student Name:</label>
+    <input type="text" name="studentName" required>
 
-        <label>Classes Attended:</label>
-        <input type="number" name="attendedClasses" min="0" required>
+    <label>Total Classes:</label>
+    <input type="number" name="totalClasses" min="1" required>
 
-        <button type="submit">Calculate Attendance</button>
+    <label>Classes Attended:</label>
+    <input type="number" name="attendedClasses" min="0" required>
 
-    </form>
+    <button type="submit">Calculate</button>
+
+</form>
 
 </div>
 
